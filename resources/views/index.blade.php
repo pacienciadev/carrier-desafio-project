@@ -1,102 +1,18 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
+@section('title', 'Lista de Funcionários')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+@section('content')
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <h1 class="m-b-md">
-                    Desafio Carriers<br><small>e-services</small>
-                </h1>
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentação Laravel</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-                <hr>
-                <br>
-                <h2 class="m-b-md">
-                    Referências e Documentações
-                </h2>
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentação Laravel</a>
-                    <a href="https://www.codigomaster.com.br/desenvolvimento/crud-com-php-de-forma-simples-e-facil/">Código Master</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+<h1>Desafio Carier <small>e-services</small></h1>
+<h2>Bem-vindo <span class="text-danger">♥</span></h2>
+<hr>
+<p>Meu nome é <strong>Rafael Eduardo</strong> e esse exercício pertence ao <i>Desafio Carier e-services</i>.</p>
+<p>Caso você tenha apenas baixado os arquivos (e provavelmente está um pouco perdido), as instruções para rodar esse sistema com excelência, se encontram em meu repositório no <strong>Github</strong> <i class="fab fa-github" aria-hidden="true"></i>, link disponível no rodapé do site.</p>
+<p>Os links solicitados no desafio se encontram no canto superior direito da tela, caso você não tenha percebido, em dropdowns separados em <strong>parte 01</strong> e <strong>parte 02</strong>.</p>
+<p>Gostaria de aproveitar esse espaço e agradecer a <i>CARRIERS TRANSPORTADORA</i> pela oportunidade.</p>
+<p>E se você é só um curioso... Fique à vontade, este código é livre <span class="text-danger">♥</span></p>
+<p>Aproveite para conhecer o meu site
+<a href="https://rafaworks.com.br">RafaWorks</a>!</p> 
+<hr>
+@endsection

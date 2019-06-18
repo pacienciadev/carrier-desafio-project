@@ -5,7 +5,6 @@
 @section('content')
 
 <!-- Formulário de Cadastro -->
-<div class="container mt-5">
     <h1>Cadastrar novo funcionário</h1>
         <form method="POST" action="/funcionarios">
             @csrf
@@ -55,6 +54,5 @@
                 <button type="submit" class="btn btn-primary">Salvar</button>
             </div>
         </form>
-    </div>
     
 @endsection
