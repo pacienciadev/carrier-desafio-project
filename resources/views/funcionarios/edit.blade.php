@@ -1,13 +1,15 @@
 @extends('layouts.app')
 
-@section('title', 'Novo Funcionário')
+@section('title', 'Editar Funcionário')
 
 @section('content')
 
 <!-- Formulário de Cadastro -->
-    <h1>Cadastrar novo funcionário</h1>
+    <h1>Editar Informações</h1>
+    <h6>Você está editando o usuário: <strong> {{ $funcionario->name }} {{ $funcionario->lastname }} </strong></h6>
     <hr>
-        <form method="POST" action="/funcionarios">
+        <form method="POST" action="/funcionarios/{{ $funcionario->id }}">
+            @method('PUT')
             @csrf
             <!-- NOME & SOBRENOMENOME -->
             <div class="form-group row">
@@ -18,7 +20,7 @@
                         class="form-control" 
                         name="name" 
                         id="name" 
-                        placeholder="Digite o primeiro nome do funcionário.">
+                        value="{{ $funcionario->name }}">
                 </div>
                 <div class="col-md-6">
                     <label for="lastname" class="col-form-label">Sobrenome</label>
@@ -27,7 +29,7 @@
                         class="form-control" 
                         name="lastname" 
                         id="lastname" 
-                        placeholder="Digite o sobrenome do funcionário.">
+                        value="{{ $funcionario->lastname }}">
                 </div>
             </div>
             <!-- IDADE & sexo -->
@@ -39,20 +41,35 @@
                         class="form-control"
                         name="age"
                         id="age"
-                        placeholder="Digite a idade do funcionário.">
+                        value="{{ $funcionario->age }}">
                 </div>
                 <div class="col-md-6">
                     <label for="gender" class="col-sm-1-12 col-form-label">Sexo</label>
                     <select class="form-control" name="gender" id="gender">
-                        <option value="null"> -- Selecione uma Opção -- </option>
-                        <option value="M">Masculino</option>
-                        <option value="F">Feminino</option>
+                        @php
+                        switch ($funcionario->gender) {
+                            case 'M':
+                                echo '
+                                    <option value="M" selected="selected">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                ';
+                                break;
+                            
+                            default:
+                                echo '
+                                    <option value="M">Masculino</option>
+                                    <option value="F" selected="selected">Feminino</option>
+                                    ';
+                                break;
+                        }
+                        @endphp
+                        
                     </select>
                 </div>
             </div>
             
             <div class="form-group">
-                <button type="submit" class="btn btn-outline-success btn-sm"><i class="far fa-save"></i> Salvar</button>
+                <button type="submit" class="btn btn-outline-success btn-sm"> <i class="fas fa-edit"></i> Atualizar Informações </button>
             </div>
         </form>
     

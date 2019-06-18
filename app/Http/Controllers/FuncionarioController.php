@@ -44,7 +44,7 @@ class FuncionarioController extends Controller
         $funcionario->gender = $request->input('gender');
         $funcionario->save();
 
-        return 'Salvadu';
+        return redirect('/funcionarios')->with('success', 'O funcionário foi adicionado.');
     }
 
     /**
@@ -55,7 +55,8 @@ class FuncionarioController extends Controller
      */
     public function show($id)
     {
-        //
+        $funcionario = Funcionario::find($id);
+        return view('funcionarios.show', compact('funcionario'));
     }
 
     /**
@@ -66,7 +67,8 @@ class FuncionarioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $funcionario = Funcionario::find($id);
+        return view('funcionarios.edit', compact('funcionario'));
     }
 
     /**
@@ -78,7 +80,11 @@ class FuncionarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $funcionario = Funcionario::find($id);
+        $funcionario->fill($request->all());
+        $funcionario->save();
+
+        return redirect('/funcionarios/'.$id)->with('success', 'Dados atualizados!');
     }
 
     /**
@@ -89,6 +95,8 @@ class FuncionarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $funcionario = Funcionario::find($id);
+        $funcionario->delete();
+        return redirect('/funcionarios')->with('success', 'O funcionário foi deletado.');
     }
 }

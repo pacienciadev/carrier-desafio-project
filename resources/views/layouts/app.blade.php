@@ -28,10 +28,8 @@
                     Parte 01
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Funcionários</a>
-                    <a class="dropdown-item" href="/funcionarios/create">Cadastrar</a>
-                    <a class="dropdown-item" href="#">Editar</a>
-                    <a class="dropdown-item" href="#">Remover</a>
+                        <a class="dropdown-item" href="/funcionarios/">Funcionários</a>
+                        <a class="dropdown-item" href="/funcionarios/create">Cadastrar</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
