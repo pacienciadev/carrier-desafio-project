@@ -4,6 +4,16 @@
 
 @section('content')
 
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <!-- Formulário de Cadastro -->
     <h1>Cadastrar novo funcionário</h1>
     <hr>
@@ -44,7 +54,7 @@
                 <div class="col-md-6">
                     <label for="gender" class="col-sm-1-12 col-form-label">Sexo</label>
                     <select class="form-control" name="gender" id="gender">
-                        <option value="null"> -- Selecione uma Opção -- </option>
+                        <option value=""> -- Selecione uma Opção -- </option>
                         <option value="M">Masculino</option>
                         <option value="F">Feminino</option>
                     </select>

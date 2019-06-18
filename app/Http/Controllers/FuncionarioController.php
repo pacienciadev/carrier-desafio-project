@@ -37,6 +37,13 @@ class FuncionarioController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required|max:64',
+            'lastname' => 'required|max:64',
+            'age' => 'required|max:3',
+            'gender' => 'required',
+        ]);
+
         $funcionario = new Funcionario();
         $funcionario->name = $request->input('name');
         $funcionario->lastname = $request->input('lastname');
@@ -80,6 +87,13 @@ class FuncionarioController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validatedData = $request->validate([
+            'name' => 'required|max:64',
+            'lastname' => 'required|max:64',
+            'age' => 'required|max:3',
+            'gender' => 'required',
+        ]);
+        
         $funcionario = Funcionario::find($id);
         $funcionario->fill($request->all());
         $funcionario->save();
