@@ -13,7 +13,7 @@
 <!-- Logo e NavBar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="/img/rw_white_150x150.png" width="30" height="30" class="d-inline-block align-top" alt="RafaWorks">
         </a>
 
@@ -52,6 +52,7 @@
 </div>
 
 <nav class="navbar justify-content-center fixed-bottom navbar-dark bg-dark">
+    <a class="navbar-brand" href="https://laravel.com/docs/5.8" target="_blank" data-toggle="tooltip" data-placement="top" title="Laravel Docs"><small>Link para rêferencia e base de desenvolvimento.</small></a>
     <a class="navbar-brand" href="https://www.facebook.com/urso.ones" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fab fa-facebook"></i></a>
     <a class="navbar-brand" href="https://www.instagram.com/ursone" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fab fa-instagram"></i></a>
     <a class="navbar-brand" href="https://www.linkedin.com/in/rafael-eduardo-aa541046/" target="_blank" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fab fa-linkedin"></i></a>

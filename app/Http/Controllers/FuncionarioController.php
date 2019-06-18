@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Funcionario;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -35,7 +36,14 @@ class FuncionarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $funcionario = new Funcionario();
+        $funcionario->name = $request->input('name');
+        $funcionario->lastname = $request->input('lastname');
+        $funcionario->age = $request->input('age');
+        $funcionario->gender = $request->input('gender');
+        $funcionario->save();
+
+        return 'Salvadu';
     }
 
     /**
