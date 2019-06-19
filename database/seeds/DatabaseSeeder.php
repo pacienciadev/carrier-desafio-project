@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        foreach(range(1,14) as $index){
+        foreach(range(1,30) as $index){
             DB::table('funcionarios')->insert([
                 'name' => $faker->name,
                 'lastname' => $faker->lastName,

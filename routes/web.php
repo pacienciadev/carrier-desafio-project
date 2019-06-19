@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('relatorios', 'RelatorioController@relatorio');
+Route::get('json_dados', 'RelatorioController@json_dados');
 Route::resource('funcionarios', 'FuncionarioController');

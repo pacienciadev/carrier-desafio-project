@@ -37,7 +37,8 @@
                     Parte 02
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="/relatorios">Relatório</a>
+                    <a class="dropdown-item" href="/relatorios">Relatórios</a>
+                    <a class="dropdown-item" href="/json_dados">Dados JSON</a>
                     </div>
                 </li>
             </div>
