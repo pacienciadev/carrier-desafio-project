@@ -37,7 +37,7 @@
                     Parte 02
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Relatório</a>
+                    <a class="dropdown-item" href="/relatorios">Relatório</a>
                     </div>
                 </li>
             </div>
@@ -50,13 +50,15 @@
 </div>
 <footer class="mb-5">
     <nav class="navbar justify-content-between fixed-bottom navbar-dark bg-dark">
-        <span class="dev-frase">Desenvolvido com <a href="https://laravel.com/docs/5.8" target="_blank" data-toggle="tooltip" data-placement="top" title="Laravel Docs">Laravel 5.8</a> e <a href="https://laravel.com/docs/5.8" target="_blank" data-toggle="tooltip" data-placement="top" title="Bootstrap Docs">Bootstrap 4</a> por <a href="https://rafaworks.com.br/sobre-o-rafa/">Rafael Eduardo</a>.</span>
-        <span>
-            <a class="navbar-brand" href="https://www.facebook.com/urso.ones" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fab fa-facebook"></i></a>
-            <a class="navbar-brand" href="https://www.instagram.com/ursone" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a class="navbar-brand" href="https://www.linkedin.com/in/rafael-eduardo-aa541046/" target="_blank" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a class="navbar-brand" href="https://github.com/Ursones" target="_blank" data-toggle="tooltip" data-placement="top" title="Github"><i class="fab fa-github"></i></a>
-        </span>
+        <div class="container">
+            <span class="dev-frase">Desenvolvido com <a href="https://laravel.com/docs/5.8" target="_blank" data-toggle="tooltip" data-placement="top" title="Laravel Docs">Laravel 5.8</a> e <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank" data-toggle="tooltip" data-placement="top" title="Bootstrap Docs">Bootstrap 4</a> por <a href="https://rafaworks.com.br/sobre-o-rafa/">Rafael Eduardo</a>.</span>
+            <span>
+                <a class="navbar-brand" href="https://www.facebook.com/urso.ones" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a class="navbar-brand" href="https://www.instagram.com/ursone" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a class="navbar-brand" href="https://www.linkedin.com/in/rafael-eduardo-aa541046/" target="_blank" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a class="navbar-brand" href="https://github.com/Ursones" target="_blank" data-toggle="tooltip" data-placement="top" title="Github"><i class="fab fa-github"></i></a>
+            </span>
+        </div>
     </nav>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
