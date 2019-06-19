@@ -4,6 +4,19 @@
 
 @section('content')
 
+{{-- Mensagem de sucesso --}}
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+{{-- Mensagem de sucesso vermelha --}}
+@if (session('red-success'))
+    <div class="alert alert-danger">
+        {{ session('red-success') }}
+    </div>
+@endif
+
 <h1>Lista de Funcionários <a href="/funcionarios/create"><button class="btn btn-outline-primary btn-sm float-right" type="button"><i class="fas fa-user-plus"></i> Adcionar Funcionário</button></a></h1>
 
 

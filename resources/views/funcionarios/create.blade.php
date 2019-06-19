@@ -4,6 +4,7 @@
 
 @section('content')
 
+{{-- CASO RETORNE UM ERRO --}}
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>

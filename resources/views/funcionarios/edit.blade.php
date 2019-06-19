@@ -14,6 +14,7 @@
     </div>
 @endif
 
+
 <!-- Formulário de Cadastro -->
     <h1>Editar Informações</h1>
     <h6>Você está editando o usuário: <strong> {{ $funcionario->name }} {{ $funcionario->lastname }} </strong></h6>

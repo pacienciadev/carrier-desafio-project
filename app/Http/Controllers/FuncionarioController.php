@@ -93,7 +93,7 @@ class FuncionarioController extends Controller
             'age' => 'required|max:3',
             'gender' => 'required',
         ]);
-        
+
         $funcionario = Funcionario::find($id);
         $funcionario->fill($request->all());
         $funcionario->save();
@@ -111,6 +111,6 @@ class FuncionarioController extends Controller
     {
         $funcionario = Funcionario::find($id);
         $funcionario->delete();
-        return redirect('/funcionarios')->with('success', 'O funcionário foi deletado.');
+        return redirect('/funcionarios')->with('red-success', 'O funcionário foi deletado com sucesso.');
     }
 }

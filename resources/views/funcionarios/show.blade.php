@@ -4,6 +4,13 @@
 
 @section('content')
 
+{{-- MENSAGEM DE SUCESSO --}}
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
 <h1>{{ $funcionario->name }} {{ $funcionario->lastname }}</h1>
 <hr>
 
@@ -19,7 +26,7 @@ $data = $data_completa->format('d/m/Y H:i');
 <h3>Idade: <span class="text-secondary"> {{ $funcionario->age }} anos</span></h3>
 <h3>Sexo: <span class="text-secondary"> {{ $sexo }}</span></h3>
 <hr>
-<h5>Data de Registo no Sistema <br><span class="text-secondary"> {{ $data }}</span></h5>
+<h5>Data de Registro no Sistema <br><span class="text-secondary"> {{ $data }}</span></h5>
 <hr>
 <div>
     <a href="/funcionarios/{{ $funcionario->id }}/edit" title="Editar Usuário">
